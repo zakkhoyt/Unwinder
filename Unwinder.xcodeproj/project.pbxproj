@@ -475,6 +475,7 @@
 				C64ACE6A17F78E480099BD67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C64ACE6B17F78E480099BD67 /* Build configuration list for PBXNativeTarget "UnwinderTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +484,7 @@
 				C64ACE6D17F78E480099BD67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

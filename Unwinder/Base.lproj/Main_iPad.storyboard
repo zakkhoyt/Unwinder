@@ -1,21 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VWWViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yxJ-Ho-5yb"/>
+                        <viewControllerLayoutGuide type="bottom" id="3gf-tv-Nfg"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-Ap-k2X">
+                                <rect key="frame" x="0.0" y="727" width="182" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="60m-EV-55y"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="37m-wK-Qu2">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdG-Vz-94F">
+                                <rect key="frame" x="421" y="727" width="182" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="FAx-cm-xfu"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlM-wz-jyz">
+                                <rect key="frame" x="842" y="727" width="182" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="WHS-Bq-BnD"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="top" secondItem="37m-wK-Qu2" secondAttribute="bottom" constant="8" symbolic="YES" id="1t7-Em-YWT"/>
+                            <constraint firstItem="37m-wK-Qu2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4jt-8j-57w"/>
+                            <constraint firstItem="EdG-Vz-94F" firstAttribute="top" secondItem="m4U-Ap-k2X" secondAttribute="top" id="7ky-H3-2qv"/>
+                            <constraint firstAttribute="trailing" secondItem="ZlM-wz-jyz" secondAttribute="trailing" id="CQX-CY-VfN"/>
+                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="top" secondItem="yxJ-Ho-5yb" secondAttribute="bottom" constant="707" id="OaF-AF-rDW"/>
+                            <constraint firstAttribute="bottom" secondItem="m4U-Ap-k2X" secondAttribute="bottom" id="SKQ-lI-EAA"/>
+                            <constraint firstItem="EdG-Vz-94F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VO7-Gf-jOK"/>
+                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="bottom" secondItem="EdG-Vz-94F" secondAttribute="bottom" id="W4F-WS-6SN"/>
+                            <constraint firstItem="37m-wK-Qu2" firstAttribute="trailing" secondItem="ZlM-wz-jyz" secondAttribute="trailing" id="eiu-tR-Bwa"/>
+                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hlJ-Mh-q8h"/>
+                            <constraint firstItem="37m-wK-Qu2" firstAttribute="leading" secondItem="m4U-Ap-k2X" secondAttribute="leading" id="oRi-KE-isA"/>
+                            <constraint firstItem="ZlM-wz-jyz" firstAttribute="bottom" secondItem="EdG-Vz-94F" secondAttribute="bottom" id="pDO-ss-IbI"/>
+                            <constraint firstItem="EdG-Vz-94F" firstAttribute="top" secondItem="ZlM-wz-jyz" secondAttribute="top" id="xMt-BW-gxk"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57" y="283"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
