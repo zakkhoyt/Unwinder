@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="VWWViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VWWIPViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yxJ-Ho-5yb"/>
                         <viewControllerLayoutGuide type="bottom" id="3gf-tv-Nfg"/>
@@ -20,56 +21,64 @@
                                 <rect key="frame" x="0.0" y="727" width="182" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="182" id="60m-EV-55y"/>
+                                    <constraint firstAttribute="width" constant="182" id="Xum-zb-LWW"/>
                                 </constraints>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tdd-wj-9j8"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="37m-wK-Qu2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37m-wK-Qu2">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdG-Vz-94F">
-                                <rect key="frame" x="421" y="727" width="182" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="182" id="FAx-cm-xfu"/>
-                                </constraints>
-                                <state key="normal" title="Take Photo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlM-wz-jyz">
                                 <rect key="frame" x="842" y="727" width="182" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="182" id="WHS-Bq-BnD"/>
+                                    <constraint firstAttribute="width" constant="182" id="O8s-gk-GQ1"/>
                                 </constraints>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="finishButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZ0-cy-A4Y"/>
+                                </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9tx-zd-JhN">
+                                <rect key="frame" x="189" y="731" width="648" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sampleWidthSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aM8-UU-7y9"/>
+                                </connections>
+                            </slider>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="top" secondItem="37m-wK-Qu2" secondAttribute="bottom" constant="8" symbolic="YES" id="1t7-Em-YWT"/>
-                            <constraint firstItem="37m-wK-Qu2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4jt-8j-57w"/>
-                            <constraint firstItem="EdG-Vz-94F" firstAttribute="top" secondItem="m4U-Ap-k2X" secondAttribute="top" id="7ky-H3-2qv"/>
-                            <constraint firstAttribute="trailing" secondItem="ZlM-wz-jyz" secondAttribute="trailing" id="CQX-CY-VfN"/>
-                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="top" secondItem="yxJ-Ho-5yb" secondAttribute="bottom" constant="707" id="OaF-AF-rDW"/>
-                            <constraint firstAttribute="bottom" secondItem="m4U-Ap-k2X" secondAttribute="bottom" id="SKQ-lI-EAA"/>
-                            <constraint firstItem="EdG-Vz-94F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VO7-Gf-jOK"/>
-                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="bottom" secondItem="EdG-Vz-94F" secondAttribute="bottom" id="W4F-WS-6SN"/>
-                            <constraint firstItem="37m-wK-Qu2" firstAttribute="trailing" secondItem="ZlM-wz-jyz" secondAttribute="trailing" id="eiu-tR-Bwa"/>
-                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hlJ-Mh-q8h"/>
-                            <constraint firstItem="37m-wK-Qu2" firstAttribute="leading" secondItem="m4U-Ap-k2X" secondAttribute="leading" id="oRi-KE-isA"/>
-                            <constraint firstItem="ZlM-wz-jyz" firstAttribute="bottom" secondItem="EdG-Vz-94F" secondAttribute="bottom" id="pDO-ss-IbI"/>
-                            <constraint firstItem="EdG-Vz-94F" firstAttribute="top" secondItem="ZlM-wz-jyz" secondAttribute="top" id="xMt-BW-gxk"/>
+                            <constraint firstItem="37m-wK-Qu2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DmT-lB-Zaz"/>
+                            <constraint firstItem="37m-wK-Qu2" firstAttribute="trailing" secondItem="ZlM-wz-jyz" secondAttribute="trailing" id="Fxq-5G-Vqy"/>
+                            <constraint firstItem="3gf-tv-Nfg" firstAttribute="top" secondItem="9tx-zd-JhN" secondAttribute="bottom" constant="4" id="Hk2-v5-gOy"/>
+                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="top" secondItem="37m-wK-Qu2" secondAttribute="bottom" constant="8" symbolic="YES" id="ILs-7p-W6R"/>
+                            <constraint firstItem="ZlM-wz-jyz" firstAttribute="top" secondItem="37m-wK-Qu2" secondAttribute="bottom" constant="8" symbolic="YES" id="JjC-9n-YbZ"/>
+                            <constraint firstItem="ZlM-wz-jyz" firstAttribute="bottom" secondItem="m4U-Ap-k2X" secondAttribute="bottom" id="U0Y-fD-L3M"/>
+                            <constraint firstAttribute="trailing" secondItem="ZlM-wz-jyz" secondAttribute="trailing" id="fbf-8X-IeS"/>
+                            <constraint firstAttribute="bottom" secondItem="m4U-Ap-k2X" secondAttribute="bottom" id="hO0-hp-Mq6"/>
+                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="leading" secondItem="37m-wK-Qu2" secondAttribute="leading" id="pQZ-VR-kRH"/>
+                            <constraint firstItem="m4U-Ap-k2X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rSy-SL-IAn"/>
+                            <constraint firstItem="ZlM-wz-jyz" firstAttribute="leading" secondItem="9tx-zd-JhN" secondAttribute="trailing" constant="7" id="t2M-8b-89p"/>
+                            <constraint firstItem="9tx-zd-JhN" firstAttribute="centerY" secondItem="ZlM-wz-jyz" secondAttribute="centerY" id="vna-0j-D97"/>
+                            <constraint firstItem="9tx-zd-JhN" firstAttribute="leading" secondItem="m4U-Ap-k2X" secondAttribute="trailing" constant="9" id="yhp-OR-R1t"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="mergedImage" destination="37m-wK-Qu2" id="rdg-dH-4sC"/>
+                        <outlet property="sampleWidthSlider" destination="9tx-zd-JhN" id="Wa3-Si-RVL"/>
+                        <outlet property="startButton" destination="m4U-Ap-k2X" id="dfs-xm-B9D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6095A0317F7939A0008CFB4 /* VWWImageMerger.m in Sources */ = {isa = PBXBuildFile; fileRef = C6095A0217F7939A0008CFB4 /* VWWImageMerger.m */; };
+		C6095A0917F798570008CFB4 /* cameraOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6095A0817F798570008CFB4 /* cameraOverlay.xib */; };
+		C6095A0E17F79E2C0008CFB4 /* VWWCameraOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6095A0D17F79E2C0008CFB4 /* VWWCameraOverlayView.m */; };
+		C6095A1617F7B32A0008CFB4 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = C6095A1517F7B32A0008CFB4 /* UIImage+Resize.m */; };
+		C6095A1B17F7B3BE0008CFB4 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = C6095A1817F7B3BE0008CFB4 /* UIImage+Alpha.m */; };
+		C6095A1C17F7B3BE0008CFB4 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = C6095A1A17F7B3BE0008CFB4 /* UIImage+RoundedCorner.m */; };
+		C6095A1F17F7B7370008CFB4 /* VWWSampleBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6095A1E17F7B7370008CFB4 /* VWWSampleBorderView.m */; };
 		C64ACE3717F78E470099BD67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64ACE3617F78E470099BD67 /* Foundation.framework */; };
 		C64ACE3917F78E470099BD67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64ACE3817F78E470099BD67 /* CoreGraphics.framework */; };
 		C64ACE3B17F78E470099BD67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64ACE3A17F78E470099BD67 /* UIKit.framework */; };
@@ -15,7 +22,7 @@
 		C64ACE4717F78E470099BD67 /* VWWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C64ACE4617F78E470099BD67 /* VWWAppDelegate.m */; };
 		C64ACE4A17F78E470099BD67 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64ACE4817F78E470099BD67 /* Main_iPhone.storyboard */; };
 		C64ACE4D17F78E470099BD67 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64ACE4B17F78E470099BD67 /* Main_iPad.storyboard */; };
-		C64ACE5017F78E470099BD67 /* VWWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64ACE4F17F78E470099BD67 /* VWWViewController.m */; };
+		C64ACE5017F78E470099BD67 /* VWWIPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64ACE4F17F78E470099BD67 /* VWWIPViewController.m */; };
 		C64ACE5217F78E470099BD67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64ACE5117F78E470099BD67 /* Images.xcassets */; };
 		C64ACE5917F78E470099BD67 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64ACE5817F78E470099BD67 /* XCTest.framework */; };
 		C64ACE5A17F78E470099BD67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64ACE3617F78E470099BD67 /* Foundation.framework */; };
@@ -35,6 +42,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6095A0117F7939A0008CFB4 /* VWWImageMerger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWImageMerger.h; sourceTree = "<group>"; };
+		C6095A0217F7939A0008CFB4 /* VWWImageMerger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWImageMerger.m; sourceTree = "<group>"; };
+		C6095A0817F798570008CFB4 /* cameraOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cameraOverlay.xib; sourceTree = "<group>"; };
+		C6095A0A17F79C2E0008CFB4 /* VWWUnwinderDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWWUnwinderDefines.h; sourceTree = "<group>"; };
+		C6095A0C17F79E2C0008CFB4 /* VWWCameraOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWCameraOverlayView.h; sourceTree = "<group>"; };
+		C6095A0D17F79E2C0008CFB4 /* VWWCameraOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWCameraOverlayView.m; sourceTree = "<group>"; };
+		C6095A1217F79EE70008CFB4 /* VWWUnwinderBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWWUnwinderBlocks.h; sourceTree = "<group>"; };
+		C6095A1417F7B32A0008CFB4 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		C6095A1517F7B32A0008CFB4 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		C6095A1717F7B3BE0008CFB4 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		C6095A1817F7B3BE0008CFB4 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		C6095A1917F7B3BE0008CFB4 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		C6095A1A17F7B3BE0008CFB4 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		C6095A1D17F7B7370008CFB4 /* VWWSampleBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWSampleBorderView.h; sourceTree = "<group>"; };
+		C6095A1E17F7B7370008CFB4 /* VWWSampleBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWSampleBorderView.m; sourceTree = "<group>"; };
 		C64ACE3317F78E470099BD67 /* Unwinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unwinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64ACE3617F78E470099BD67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C64ACE3817F78E470099BD67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,8 +69,8 @@
 		C64ACE4617F78E470099BD67 /* VWWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VWWAppDelegate.m; sourceTree = "<group>"; };
 		C64ACE4917F78E470099BD67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		C64ACE4C17F78E470099BD67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		C64ACE4E17F78E470099BD67 /* VWWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWWViewController.h; sourceTree = "<group>"; };
-		C64ACE4F17F78E470099BD67 /* VWWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VWWViewController.m; sourceTree = "<group>"; };
+		C64ACE4E17F78E470099BD67 /* VWWIPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWWIPViewController.h; sourceTree = "<group>"; };
+		C64ACE4F17F78E470099BD67 /* VWWIPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VWWIPViewController.m; sourceTree = "<group>"; };
 		C64ACE5117F78E470099BD67 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C64ACE5717F78E470099BD67 /* UnwinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnwinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64ACE5817F78E470099BD67 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -81,6 +103,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6095A0417F7939E0008CFB4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C64ACE4E17F78E470099BD67 /* VWWIPViewController.h */,
+				C64ACE4F17F78E470099BD67 /* VWWIPViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C6095A0517F793B10008CFB4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C64ACE4817F78E470099BD67 /* Main_iPhone.storyboard */,
+				C64ACE4B17F78E470099BD67 /* Main_iPad.storyboard */,
+				C6095A0817F798570008CFB4 /* cameraOverlay.xib */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		C6095A0717F793CC0008CFB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6095A0117F7939A0008CFB4 /* VWWImageMerger.h */,
+				C6095A0217F7939A0008CFB4 /* VWWImageMerger.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C6095A0B17F79E080008CFB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6095A0C17F79E2C0008CFB4 /* VWWCameraOverlayView.h */,
+				C6095A0D17F79E2C0008CFB4 /* VWWCameraOverlayView.m */,
+				C6095A1D17F7B7370008CFB4 /* VWWSampleBorderView.h */,
+				C6095A1E17F7B7370008CFB4 /* VWWSampleBorderView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C6095A1317F7B31F0008CFB4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C6095A1717F7B3BE0008CFB4 /* UIImage+Alpha.h */,
+				C6095A1817F7B3BE0008CFB4 /* UIImage+Alpha.m */,
+				C6095A1917F7B3BE0008CFB4 /* UIImage+RoundedCorner.h */,
+				C6095A1A17F7B3BE0008CFB4 /* UIImage+RoundedCorner.m */,
+				C6095A1417F7B32A0008CFB4 /* UIImage+Resize.h */,
+				C6095A1517F7B32A0008CFB4 /* UIImage+Resize.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		C64ACE2A17F78E470099BD67 = {
 			isa = PBXGroup;
 			children = (
@@ -114,14 +188,13 @@
 		C64ACE3C17F78E470099BD67 /* Unwinder */ = {
 			isa = PBXGroup;
 			children = (
-				C64ACE4517F78E470099BD67 /* VWWAppDelegate.h */,
-				C64ACE4617F78E470099BD67 /* VWWAppDelegate.m */,
-				C64ACE4817F78E470099BD67 /* Main_iPhone.storyboard */,
-				C64ACE4B17F78E470099BD67 /* Main_iPad.storyboard */,
-				C64ACE4E17F78E470099BD67 /* VWWViewController.h */,
-				C64ACE4F17F78E470099BD67 /* VWWViewController.m */,
+				C6095A1317F7B31F0008CFB4 /* Categories */,
+				C6095A0417F7939E0008CFB4 /* Controllers */,
 				C64ACE5117F78E470099BD67 /* Images.xcassets */,
+				C6095A0717F793CC0008CFB4 /* Models */,
+				C6095A0517F793B10008CFB4 /* Storyboards */,
 				C64ACE3D17F78E470099BD67 /* Supporting Files */,
+				C6095A0B17F79E080008CFB4 /* Views */,
 			);
 			path = Unwinder;
 			sourceTree = "<group>";
@@ -129,10 +202,14 @@
 		C64ACE3D17F78E470099BD67 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C64ACE4517F78E470099BD67 /* VWWAppDelegate.h */,
+				C64ACE4617F78E470099BD67 /* VWWAppDelegate.m */,
 				C64ACE3E17F78E470099BD67 /* Unwinder-Info.plist */,
 				C64ACE3F17F78E470099BD67 /* InfoPlist.strings */,
 				C64ACE4217F78E470099BD67 /* main.m */,
 				C64ACE4417F78E470099BD67 /* Unwinder-Prefix.pch */,
+				C6095A0A17F79C2E0008CFB4 /* VWWUnwinderDefines.h */,
+				C6095A1217F79EE70008CFB4 /* VWWUnwinderBlocks.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,6 +311,7 @@
 			files = (
 				C64ACE4D17F78E470099BD67 /* Main_iPad.storyboard in Resources */,
 				C64ACE5217F78E470099BD67 /* Images.xcassets in Resources */,
+				C6095A0917F798570008CFB4 /* cameraOverlay.xib in Resources */,
 				C64ACE4A17F78E470099BD67 /* Main_iPhone.storyboard in Resources */,
 				C64ACE4117F78E470099BD67 /* InfoPlist.strings in Resources */,
 			);
@@ -254,9 +332,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C64ACE5017F78E470099BD67 /* VWWViewController.m in Sources */,
+				C6095A1C17F7B3BE0008CFB4 /* UIImage+RoundedCorner.m in Sources */,
+				C6095A0317F7939A0008CFB4 /* VWWImageMerger.m in Sources */,
+				C64ACE5017F78E470099BD67 /* VWWIPViewController.m in Sources */,
+				C6095A1F17F7B7370008CFB4 /* VWWSampleBorderView.m in Sources */,
 				C64ACE4317F78E470099BD67 /* main.m in Sources */,
+				C6095A0E17F79E2C0008CFB4 /* VWWCameraOverlayView.m in Sources */,
+				C6095A1B17F7B3BE0008CFB4 /* UIImage+Alpha.m in Sources */,
 				C64ACE4717F78E470099BD67 /* VWWAppDelegate.m in Sources */,
+				C6095A1617F7B32A0008CFB4 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +480,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Unwinder/Unwinder-Prefix.pch";
 				INFOPLIST_FILE = "Unwinder/Unwinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -409,6 +494,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Unwinder/Unwinder-Prefix.pch";
 				INFOPLIST_FILE = "Unwinder/Unwinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

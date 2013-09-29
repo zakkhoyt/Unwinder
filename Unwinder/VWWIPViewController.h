@@ -1,5 +1,5 @@
 //
-//  VWWViewController.h
+//  VWWIPViewController.h
 //  Unwinder
 //
 //  Created by Zakk Hoyt on 9/28/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VWWViewController : UIViewController
+@interface VWWIPViewController : UIViewController
 
 @end
