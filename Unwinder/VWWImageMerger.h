@@ -10,11 +10,17 @@
 
 @interface VWWImageMerger : NSObject
 
--(id)initWithSize:(CGSize)size;
--(void)addImage:(UIImage*)image atIndex:(NSInteger)index;
--(void)removeImageAtIndex:(NSInteger)index;
+// clears samples and mergedImage
+-(void)beginSession;
+
+// inserts image and returns. Completion is fired after sample is rendered into mergedImage
+-(void)addImage:(UIImage*)image withSamplWidth:(CGFloat)width atIndex:(NSInteger)index completion:(VWWUnwinderImageBlock)completion;
+
+// Merge all images and then apply finaliztion and perhaps watermark
+-(void)finalizeSessionWithCompletion:(VWWUnwinderImageBlock)completion;
+
+// Get the current image at any time
 -(UIImage*)mergedImage;
--(void)clear;
-    
-@property (nonatomic) float sampleWidth;
+
+
 @end

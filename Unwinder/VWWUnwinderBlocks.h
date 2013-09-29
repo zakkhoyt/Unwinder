@@ -11,4 +11,5 @@
 
 
 typedef void (^VWWUnwinderIBActionBlock)(id sender);
+typedef void (^VWWUnwinderImageBlock)(UIImage *image);
 #endif

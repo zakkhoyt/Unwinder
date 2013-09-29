@@ -28,7 +28,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
 
     
     // Slider
@@ -47,58 +46,48 @@
         self.cameraOverlayView = [[[NSBundle mainBundle] loadNibNamed:@"cameraOverlay" owner:self options:nil] objectAtIndex:0];
         self.cameraOverlayView.sampleWidth = self.sampleWidthSlider.value;
         self.imagePicker.cameraOverlayView = self.cameraOverlayView;
-
     } else {
         self.startButton.enabled = NO;
     }
     
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
-    }
+    // Image merger
+    self.imageMerger = [[VWWImageMerger alloc]init];
     
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    self.imageMerger = [[VWWImageMerger alloc]initWithSize:self.mergedImage.frame.size];
-}
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"%s", __func__);
 }
 
 
 
 - (IBAction)startButtonTouchUpInside:(id)sender {
     self.index = 0;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        // Create overlay and use size
-        
-        __weak VWWIPViewController *weakSelf = self;
-        [self.cameraOverlayView setTakeSampleBlock:^(id sender) {
-            NSLog(@"button tapped... taking picture");
-            [weakSelf.imagePicker takePicture];
-        }];
-        
-        self.popover = [[UIPopoverController alloc] initWithContentViewController:self.imagePicker];
-        [self.popover presentPopoverFromRect:self.startButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
-        
-    } else {
-        [self presentViewController:self.imagePicker animated:YES completion:^{
-           
-        }];
-
-    }
-}
-- (IBAction)finishButtonTouchUpInside:(id)sender {
-    UIImage *mergedImage = [self.imageMerger mergedImage];
-    self.mergedImage.image = mergedImage;
-}
-
-- (IBAction)sampleWidthSliderValueChanged:(id)sender {
+    [self.imageMerger beginSession];
     
+    __weak VWWIPViewController *weakSelf = self;
+    [self.cameraOverlayView setTakeSampleBlock:^(id sender) {
+        NSLog(@"button tapped... taking picture");
+        [weakSelf.imagePicker takePicture];
+    }];
+    
+    self.popover = [[UIPopoverController alloc] initWithContentViewController:self.imagePicker];
+    [self.popover presentPopoverFromRect:self.startButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
 }
+
+
+
+
+
+- (IBAction)finishButtonTouchUpInside:(id)sender {
+    [self.imageMerger finalizeSessionWithCompletion:^(UIImage *image) {
+        self.mergedImage.image = image;
+    }];
+}
+
 
 
 #pragma mark UIImagePickerControllerDelegate
@@ -115,12 +104,22 @@
 //    NSString *const UIImagePickerControllerMediaMetadata;
     
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    NSLog(@"image size is %@", NSStringFromCGSize(image.size));
+    
+    __weak VWWIPViewController *weakSelf = self;
+    [self.imageMerger addImage:image
+                withSamplWidth:self.sampleWidthSlider.value
+                       atIndex:self.index
+                    completion:^(UIImage *image) {
+                        weakSelf.mergedImage.image = image;
+                    }];
+    
 //    self.mergedImage.image = image;
 //    return;
-    [self.imageMerger addImage:image atIndex:self.index];
+//    [self.imageMerger addImage:image atIndex:self.index];
 //    UIImage *mergedImage = [self.imageMerger mergedImage];
 //    self.mergedImage.image = mergedImage;
-    self.index++;
+//    self.index++;
     
 }
 
